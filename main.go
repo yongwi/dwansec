@@ -167,7 +167,7 @@ func runAgentLogScanner() {
 	fmt.Println("[INFO] Agent: SSH Log Scanner Aktif (Mode Real-Time Zero Tolerance)...")
 
 	for {
-		cmd := exec.Command("journalctl", "-u", "sshd", "-n", "5", "--no-pager")
+		cmd := exec.Command("journalctl", "-u", "ssh", "-n", "5", "--no-pager")
 		out, err := cmd.Output()
 		var newLogs []AuthLog
 
